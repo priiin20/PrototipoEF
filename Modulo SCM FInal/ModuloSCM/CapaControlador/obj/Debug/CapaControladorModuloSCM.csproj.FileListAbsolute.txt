@@ -1,0 +1,9 @@
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\obj\Debug\CapaControladorModuloSCM.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\bin\Debug\CapaControladorModuloSCM.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\bin\Debug\CapaControladorModuloSCM.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\obj\Debug\CapaControladorModuloSCM.csproj.CopyComplete
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\obj\Debug\CapaControladorModuloSCM.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\obj\Debug\CapaControladorModuloSCM.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\bin\Debug\CapaModeloModuloSCM.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\bin\Debug\CapaModeloModuloSCM.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaControlador\obj\Debug\CapaControladorModuloSCM.csprojAssemblyReference.cache

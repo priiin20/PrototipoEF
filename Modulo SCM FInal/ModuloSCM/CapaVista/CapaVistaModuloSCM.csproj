@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B66849A7-DFF4-4AD9-8516-92C75F46690C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaVistaModuloSCM</RootNamespace>
+    <AssemblyName>CapaVistaModuloSCM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaControladorModuloSCM">
+      <HintPath>..\CapaControlador\bin\Debug\CapaControladorModuloSCM.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaModeloModuloSCM">
+      <HintPath>..\CapaModelo\bin\Debug\CapaModeloModuloSCM.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaNavegador">
+      <HintPath>..\Navegador-main\Navegador-main\Navegador\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaReporteador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reporteador\CapaVista\bin\Debug\CapaVistaReporteador.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaSeguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mantenimientos\Bodega\frmBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Bodega\frmBodega.Designer.cs">
+      <DependentUpon>frmBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Categoria_Producto\frmCategoriaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Categoria_Producto\frmCategoriaProducto.designer.cs">
+      <DependentUpon>frmCategoriaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Correo Proveedor\frmCorreoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Correo Proveedor\frmCorreoProveedor.designer.cs">
+      <DependentUpon>frmCorreoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Departamento\frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Departamento\frmDepartamento.designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Encargado Bodega\frmEncargadoBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Encargado Bodega\frmEncargadoBodega.Designer.cs">
+      <DependentUpon>frmEncargadoBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Fabrica\frmFabrica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Fabrica\frmFabrica.designer.cs">
+      <DependentUpon>frmFabrica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Linea_Producto\frmLineaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Linea_Producto\frmLineaProducto.designer.cs">
+      <DependentUpon>frmLineaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Marca\frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Marca\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Municipio\frmMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Municipio\frmMunicipio.designer.cs">
+      <DependentUpon>frmMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Pais\frmPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Pais\frmPais.designer.cs">
+      <DependentUpon>frmPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Producto\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Producto\frmProducto.designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Proveedor\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Proveedor\frmProveedor.designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Ruta\frmRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Ruta\frmRuta.designer.cs">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono Proveedor\frmTelefonoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Telefono Proveedor\frmTelefonoProveedor.designer.cs">
+      <DependentUpon>frmTelefonoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Tipo de Movimiento\frmTipoMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Tipo de Movimiento\frmTipoMovimiento.Designer.cs">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Vehiculo\frmVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Vehiculo\frmVehiculo.Designer.cs">
+      <DependentUpon>frmVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmMovimientoInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmMovimientoInventarios.Designer.cs">
+      <DependentUpon>frmMovimientoInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmVistaCompraPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmVistaCompraPedido.Designer.cs">
+      <DependentUpon>frmVistaCompraPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\Bodega\frmBodega.resx">
+      <DependentUpon>frmBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Categoria_Producto\frmCategoriaProducto.resx">
+      <DependentUpon>frmCategoriaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Correo Proveedor\frmCorreoProveedor.resx">
+      <DependentUpon>frmCorreoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Departamento\frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Encargado Bodega\frmEncargadoBodega.resx">
+      <DependentUpon>frmEncargadoBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Fabrica\frmFabrica.resx">
+      <DependentUpon>frmFabrica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Linea_Producto\frmLineaProducto.resx">
+      <DependentUpon>frmLineaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Marca\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Municipio\frmMunicipio.resx">
+      <DependentUpon>frmMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Pais\frmPais.resx">
+      <DependentUpon>frmPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Producto\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Proveedor\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Ruta\frmRuta.resx">
+      <DependentUpon>frmRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Telefono Proveedor\frmTelefonoProveedor.resx">
+      <DependentUpon>frmTelefonoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Tipo de Movimiento\frmTipoMovimiento.resx">
+      <DependentUpon>frmTipoMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Vehiculo\frmVehiculo.resx">
+      <DependentUpon>frmVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmMovimientoInventarios.resx">
+      <DependentUpon>frmMovimientoInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmVistaCompraPedido.resx">
+      <DependentUpon>frmVistaCompraPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
