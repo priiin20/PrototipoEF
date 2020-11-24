@@ -1,0 +1,12 @@
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\MiParte\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ProyectoCLC_ModuloSCM\PrototipoSCM\ModuloSCM\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
