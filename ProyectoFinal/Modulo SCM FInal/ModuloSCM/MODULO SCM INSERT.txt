@@ -1,0 +1,499 @@
+INSERT INTO `login` (`pk_id_login`, `usuario_login`, `contraseña_login`, `nombreCompleto_login`, `estado_login`) VALUES
+(1, 'sistema', 'bi0PL96rbxVRPKJQsLJJAg==', 'Usuario de prueba', 1),
+(2, 'bjsican', '0FOYy5u5h0djKjzCYqfvkg==', 'Billy Sican', 1),
+(3, 'bmaza', 'xTfsC3/XR/CVyDvNr1Fs+g==', 'Bryan Mazariegos', 1),
+(4, 'jsican', 'jsican', 'Jeshua Sican', 0),
+(5, 'jmorataya', '123', 'Julio Morataya', 0),
+(100, 'Cyndi', '8zSCkFhA9DUcqH//GEAN/A==', 'Cyndi Medina', 1); /*Clave cyndi123*/
+
+INSERT INTO `permiso` (`pk_id_permiso`, `insertar_permiso`, `modificar_permiso`, `eliminar_permiso`, `consultar_permiso`, `imprimir_permiso`) VALUES
+(1, 1, 1, 1, 1, 1),
+(2, 1, 0, 0, 1, 1),
+(3, 1, 1, 1, 0, 0),
+(4, 1, 1, 1, 1, 1),
+(5, 1, 1, 1, 1, 1),
+(6, 1, 1, 1, 1, 1),
+(7, 1, 1, 1, 1, 1),
+(8, 1, 0, 1, 0, 0),
+(9, 1, 1, 0, 0, 0),
+(10, 1, 1, 0, 0, 0),
+(11, 1, 1, 1, 1, 1),
+(12, 0, 0, 0, 1, 0),
+(13, 0, 0, 0, 1, 0),
+(14, 0, 0, 0, 0, 0),
+(15, 1, 0, 0, 1, 0),
+(16, 0, 0, 0, 0, 0),
+(17, 1, 1, 0, 0, 0),
+(18, 0, 0, 0, 0, 0),
+(19, 0, 0, 0, 0, 0),
+(20, 0, 0, 0, 0, 0);
+
+INSERT INTO `modulo` (`pk_id_modulo`, `nombre_modulo`, `descripcion_modulo`, `estado_modulo`) VALUES
+(1, 'Seguridad', 'Aplicaciones de seguridad', 1),
+(2, 'Consultas', 'Consultas Inteligentes', 1),
+(3, 'Reporteador', 'Aplicaciones de Reporteador', 1),
+(4, 'HRM', 'Aplicaciones de Recursos Humanos', 1),
+(5, 'FRM', 'Aplicaciones de Finanzas', 1),
+(6, 'SCM', 'Aplicaciones Control de Inventario', 1),
+(7, 'MRP', 'Aplicaciones de Produccion', 1),
+(8, 'CRM', 'Aplicaciones de Ventas', 1);
+
+
+INSERT INTO `aplicacion` (`pk_id_aplicacion`, `fk_id_modulo`, `nombre_aplicacion`, `descripcion_aplicacion`, `estado_aplicacion`) VALUES
+(1, 1, 'Login', 'Ventana de Ingreso', 1),
+(2, 1, 'Mantenimiento Usuario', 'Mantenimientos de usuario', 1),
+(3, 1, 'Mantenimiento Aplicacion', 'ABC de las Aplicaciones', 1),
+(4, 1, 'Mantenimiento Perfil', 'ABC de perfiles', 1),
+(5, 1, 'Asignacion de Aplicaciones a Perfil', 'Asignacion Aplicacion y perfil', 1),
+(6, 1, 'Asignacaion de Aplicaciones', 'Asignacion especificas a un usuario', 1),
+(7, 1, 'Consulta Aplicacion', 'Mantenimiento de Aplicaciones', 1),
+(8, 1, 'Agregar Modulo', 'Mantenimientos de Modulos', 1),
+(9, 1, 'Consultar Perfil', 'Consultas de perfiles disponibles', 1),
+(10, 1, 'Permisos', 'Asignar permisos a perfiles y aplicaciones', 1),
+(11, 1, 'Cambio de Contraseña', 'General', 1),
+(101, 3, 'Gestor de Reportes', 'Reportes y Rutas', 1),
+(102, 3, 'Reportes por Modulo', 'Muestra reportes de cada modulo', 1),
+(103, 3, 'Reportes Modulo', 'Reportes de Modulo', 1),
+(104, 3, 'Asignacion Reporte a Modulo', 'Asignar Reportes a Modulo especifico', 1),
+(105, 3, 'Asignacion Reporte a Aplicacion', 'por Aplicacion', 1),
+(2301, 6, 'Linea Producto', 'lINEA', 1),
+(2302, 6, 'Categoria Producto', 'Categoria', 1),
+(2303, 6, 'Producto', 'Producto', 1),
+(2304, 6, 'Departamento', 'Deptos', 1),
+(2305, 6, 'Municipio', 'Muni depto', 1),
+(2306, 6, 'Ruta', 'Rutas', 1),
+(2307, 6, 'Proveedores', 'Nada', 1),
+(2308, 6, 'Telefono Proveedor', 'Telefonos ', 1),
+(2309, 6, 'Correo Proveedor', 'Correos', 1),
+(2310, 6, 'Pais', 'Pais de Proveedor', 1),
+(2311, 6, 'Marca', 'Contiene la Marca de Vehiculos', 1),
+(2312, 6, 'Vehiculo', 'Vehiculos usados para traslados', 1),
+(2313, 6, 'Bodega', 'Localizacion de bodegas', 1),
+(2314, 6, 'Encargado Bodega', 'Empleado dentro del area de bodegas', 1),
+(2315, 6, 'Tipo de Movimiento', 'Movimientos de Inventarios', 1),
+(2316, 6, 'Compras y Pedidos', 'Gestión de Órdenes de Compra y Pedido', 1),
+(2317, 6, 'Movimiento de Inventarios', 'Actualizacion de Inventarios', 1),
+(2318, 6, 'Fabrica', 'Fabrica', 1),
+(2319, 6, 'Gestión de Compras y Pedidos', 'Se controla los datos de estas tablas ', 1);
+
+
+INSERT INTO `perfil` (`pk_id_perfil`, `nombre_perfil`, `descripcion_perfil`, `estado_perfil`) VALUES
+(1, 'Admin', 'Administracion del programa', 1),
+(2, 'Sistema', 'Administrador del sistema', 1),
+(3, 'Digitador', 'Digitador para Cuentas', 1),
+(4, 'Consultor', 'Unicamente consultas ', 1),
+(5, 'Reportes', 'Ingreso y consultas de reportes', 1),
+(6, 'Pruebas', 'pruebas', 1);
+
+INSERT INTO `perfil_usuario` (`pk_id_perfil_usuario`, `fk_idusuario_perfil_usuario`, `fk_idperfil_perfil_usuario`) VALUES
+(1, 1, 1),
+(2, 3, 3),
+(4, 4, 1),
+(5, 5, 5),
+(9, 100, 1);
+
+
+INSERT INTO `aplicacion_usuario` (`pk_id_aplicacion_usuario`, `fk_idlogin_aplicacion_usuario`, `fk_idaplicacion_aplicacion_usuario`, `fk_idpermiso_aplicacion_usuario`) VALUES
+(1, 1, 4, 1),
+(2, 1, 5, 2),
+(3, 1, 6, 3),
+(4, 3, 8, 10),
+(5, 4, 6, 14),
+(6, 5, 5, 16),
+(7, 5, 2, 17),
+(101, 100, 2313, 1),
+(102, 100, 2316, 1),
+(103, 100, 2314, 1),
+(104, 100, 2311, 1),
+(105, 100, 2315, 1),
+(106, 100, 2312, 1),
+(107, 100, 2306, 1),
+(108, 100, 2307, 1),
+(109, 100, 2308, 1),
+(110, 100, 2309, 1),
+(111, 100, 2310, 1),
+(112, 100, 2302, 1),
+(113, 100, 2304, 1),
+(114, 100, 2318, 1),
+(115, 100, 2301, 1),
+(116, 100, 2305, 1),
+(117, 100, 2303, 1),
+(118, 100, 2319, 1),
+(119, 100, 2317, 1),
+(120, 100, 101, 1),
+(121, 100, 102, 1),
+(122, 100, 103, 1),
+(124, 100, 104, 1),
+(125, 100, 105, 1),
+(126, 100, 1, 18);
+
+
+
+INSERT INTO `aplicacion_perfil` (`pk_id_aplicacion_perfil`, `fk_idaplicacion_aplicacion_perfil`, `fk_idperfil_aplicacion_perfil`, `fk_idpermiso_aplicacion_perfil`) VALUES
+(1, 1, 1, 1),
+(2, 4, 1, 2),
+(3, 5, 1, 3),
+(4, 2, 1, 4),
+(5, 3, 1, 5),
+(6, 6, 1, 6),
+(7, 8, 1, 7),
+(8, 2, 3, 8),
+(9, 3, 3, 9),
+(10, 4, 3, 11),
+(11, 2, 4, 12),
+(12, 8, 4, 13),
+(13, 8, 5, 15),
+(14, 9, 1, 19),
+(15, 10, 1, 20);
+
+
+
+/* -----------------------------------------------------PAIS---------------------------------------------------------------------------*/
+select * from pais;
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Guatemala', 'Guatemala', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Belice', 'Belmopán', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Salvador', 'San Salvador', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Honduras', 'Tegucigalpa', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Nicaragua', 'Managua', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Costa Rica', 'San José', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('España', 'Madrid', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Brasil', 'Brasilia', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('Canada', 'Ottawa', 1);
+INSERT INTO `pais` (`nombre_pais`, `capital_pais`, `estado_pais`) VALUES ('México', 'México', 1);
+
+/* -----------------------------------------------------PROVEEDOR---------------------------------------------------------------------------*/
+select * from proveedor;
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (1, 'COLCHO.S.A.','Maria Lopez','123654-K', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (2, 'COLCOL.S.A.','Juan Gal','587469-H', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (3, 'CAMA.S.A.','Laura Molina','987456-F', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (4, 'SLEEP.S.A.','Carlos Ramos','987423-B', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (5, 'KING.S.A.','Mauro Pal','2364789-H', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (6, 'COLCHONES.S.A.','Ester Palma','9872646-D', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (7,'PLLASTICA.S.A.','Juan Gonzalez','594315-N', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (8, 'CENTRALCA.S.A.','Carmen Hernández','5943158-N', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (9, 'CAMCAM.S.A.','Mariano Bustamante','9703100-A', 1);
+INSERT INTO `proveedor` (`fk_id_pais`, `razon_social_proveedor`, `representante_legal_proveedor`, `nit_proveedor`, `estado_proveedor`) 
+VALUES (10, 'KINKK.S.A.','Wilber Estrada','3273914-M', 1);
+
+/* -----------------------------------------------------CORREO PROVEEDOR---------------------------------------------------------------------------*/
+select * from correo_proveedor;
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (1, 'colcho@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (2, 'colcol@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (3, 'cama@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (4, 'sleep@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (5, 'king@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (6, 'colchones@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (7, 'pllastica@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (8, 'centralca@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (9, 'camcam@gmail.com', 1);
+INSERT INTO `correo_proveedor` (`fk_id_proveedor`, `correo_correo_proveedor`, `estado_correo_proveedor`) VALUES (10, 'kinkk@gmail.com', 1);
+
+/* -----------------------------------------------------TELEFONO PROVEEDOR---------------------------------------------------------------------------*/
+select * from telefono_proveedor;
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (1, '22547896', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (2, '23687453', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (3, '29230107', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (4, '22654789', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (5, '23175655', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (6, '27300210', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (7, '21123460', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (8, '29700799', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (9, '20042379', 1);
+INSERT INTO `telefono_proveedor` (`fk_id_proveedor`, `telefono_telefono_proveedor`, `estado_telefono_proveedor`) VALUES (10, '23073321', 1);
+
+
+/* -----------------------------------------------------RUTA---------------------------------------------------------------------------*/
+select * from ruta;
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('6ta avenida 8-03 zona 5','5ta avenida 20-12 zona 21','Ruta1', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('2da avenida 5-15 zona 6','9na avenida 30-22 zona 15','Ruta2', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('3ra avenida 70-29 zona 8','6ta avenida 10-11 zona 16','Ruta3', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('2da avenida 07-39 zona 4','1ra avenida 13-20 zona 21','Ruta4', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('1ra avenida 09-40 zona 5','5ta avenida 03-07 zona 12','Ruta5', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('6ta avenida 15-35 zona 3','6ta avenida 16-45 zona 13','Ruta6', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('9na avenida 13-63 zona 7','4ta avenida 23-35 zona 17','Ruta7', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('10ma avenida 19-29 zona 15','9na avenida 39-20 zona 18','Ruta8', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('5ta avenida 18-20 zona 20','10ma avenida 15-31 zona 21','Ruta9', 1);
+INSERT INTO `ruta` (`origen_ruta`, `destino_ruta`, `descripcion_ruta`, `estado_ruta`) VALUES ('4ta avenida 22-07 zona 21','3ra avenida 08-10 zona 11','Ruta10', 1);
+
+/* -----------------------------------------------------MARCA---------------------------------------------------------------------------*/
+select * from marca;
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('BMW', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('CHEVROLET', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('MAZDA', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Kia', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Toyota', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Mercedes', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Mitsubishi', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Nissan', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('suzuki', 1);
+INSERT INTO `marca` ( `descripcion_marca`, `estado_marca`) VALUES ('Volvo', 1);
+
+
+/* -----------------------------------------------------VEHICULO---------------------------------------------------------------------------*/
+select * from vehiculo;
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (1,'P123KJL','Serie1','Rojo','2015','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (2,'P012HGL','CRUZE','Blanco','2014','Regular',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (3,'P265MFD','Marza3','Blanco','2014','Regular',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (5,'P123KJL','Dyna','Blanco','2015','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (5,'P368BHD','Dyna','Blanco','2015','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (5,'P214DMC','Dyna','Blanco','2015','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (5,'P332ASE','Dyna','Blanco','2015','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (7,'P178BNM','Fuso','Blanco','2016','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (8,'P128CCV','Condor','Blanco','2013','Diesel',1);
+INSERT INTO `vehiculo` ( `fk_id_marca`,`placa_vehiculo`, `modelo_vehiculo`,`color_vehiculo`,`anio_vehiculo`,`tipo_combustible_vehiculo`,`estado_vehiculo`) 
+VALUES (8,'P038TTR','Condor','Blanco','2013','Diesel',1);
+
+/* -----------------------------------------------------DEPARTAMENTO---------------------------------------------------------------------------*/
+select * from departamento;
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Chiquimula','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Petén','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('El Progreso','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Quiché','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Escuintla','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Huehuetenango','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Izabal','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Jalapa','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Jutiapa','Ninguna',1);
+INSERT INTO `departamento` ( `nombre_departamento`,`descripcion_departamento`,`estado_departamento`) VALUES ('Quetzaltenango','Ninguna',1);
+
+
+/* -----------------------------------------------------MUNICIPIO---------------------------------------------------------------------------*/
+select * from municipio;
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (1,'Esquipulas','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (2,'La Libertad','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (3,'Morazán','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (4,'Zacualpa','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (5,'Siquinalá','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (6,'Nentón','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (7,'Los Amates','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (8,'Monjas','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (9,'El Adelanto','Ninguna',1);
+INSERT INTO `municipio` (`fk_id_departamento`,`nombre_municipio`,`descripcion_municipio`,`estado_municipio`) VALUES (10,'Salcajá','Ninguna',1);
+
+
+/* -----------------------------------------------------BODEGA---------------------------------------------------------------------------*/
+select * from bodega;
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (1,'Ninguna', 50.30,'6ta avenida 8-03 zona 5','22654786',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (2,'Ninguna', 60.40,'2da avenida 5-15 zona 6','22478631',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (3,'Ninguna', 50.40,'3ra avenida 70-29 zona 8','32479513',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (4,'Ninguna', 120.50,'2da avenida 07-39 zona 4','36975135',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (5,'Ninguna', 100.00,'1ra avenida 09-40 zona 5','68713314',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (6,'Ninguna', 68.00,'6ta avenida 15-35 zona 3','3877315',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (7,'Ninguna', 120.00,'9na avenida 13-63 zona 7','36974123',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (8,'Ninguna', 60.00,'10ma avenida 19-29 zona 15','22146974',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (9,'Ninguna', 160.00,'5ta avenida 18-20 zona 20','23009435',1);
+INSERT INTO `bodega` ( `fk_id_municipio`,`descripcion_bodega`, `dimensiones_bodega`,`direccion_bodega`,`telefono_bodega`,`estado_bodega`) 
+VALUES (10,'Ninguna', 60.00,'4ta avenida 22-07 zona 21','24032147',1);
+
+/* ----------------------------------------------------------GENERO----------------------------------------------------------------------*/
+select * from genero;
+INSERT INTO `genero` (`pk_id_genero`,`nombre_genero`) VALUES (1,'Hombre');
+INSERT INTO `genero` (`pk_id_genero`,`nombre_genero`) VALUES (2,'Mujer');
+
+/* ----------------------------------------------------------ESTADO CIVIL----------------------------------------------------------------------*/
+select * from estado_civil;
+INSERT INTO `estado_civil` (`pk_id_estado_civil`,`nombre_estado_civil`) VALUES (1,'Soltero');
+INSERT INTO `estado_civil` (`pk_id_estado_civil`,`nombre_estado_civil`) VALUES (2,'Casado');
+INSERT INTO `estado_civil` (`pk_id_estado_civil`,`nombre_estado_civil`) VALUES (3,'Divorciado');
+INSERT INTO `estado_civil` (`pk_id_estado_civil`,`nombre_estado_civil`) VALUES (4,'Viudo');
+
+/* ----------------------------------------------------------LICENCIA CONDUCIR----------------------------------------------------------------------*/
+select * from licencia_conduccion;
+INSERT INTO `licencia_conduccion` (`pk_id_licencia_conduccion`,`tipo_licencia_conduccion`) VALUES (1,'A');
+INSERT INTO `licencia_conduccion` (`pk_id_licencia_conduccion`,`tipo_licencia_conduccion`) VALUES (2,'B');
+INSERT INTO `licencia_conduccion` (`pk_id_licencia_conduccion`,`tipo_licencia_conduccion`) VALUES (3,'C');
+
+
+/* ----------------------------------------------------------HORARIO PUESTO----------------------------------------------------------------------*/
+select * from horario;
+INSERT INTO `horario` (`pk_id_horario`,`nombre_horario`,`descripcion_horario`) VALUES (1,'Matutino','Ninguna');
+INSERT INTO `horario` (`pk_id_horario`,`nombre_horario`,`descripcion_horario`) VALUES (2,'Vespertino','Ninguna');
+
+
+/* ----------------------------------------------------------PUESTO EMPLEADO----------------------------------------------------------------------*/
+select * from puesto;
+INSERT INTO `puesto` (`pk_id_puesto`,`nombre_puesto`,`salario_puesto`,`fk_id_horario_puesto`) VALUES (1,'Encargado de Bodega',1550.00 ,1);
+INSERT INTO `puesto` (`pk_id_puesto`,`nombre_puesto`,`salario_puesto`,`fk_id_horario_puesto`) VALUES (2,'Encargado de Bodega',1550.00 ,2);
+
+
+/* ----------------------------------------------------------HORARIO EMPLEADO----------------------------------------------------------------------*/
+select * from hora_empleado;
+
+
+/* ----------------------------------------------------------DEPARTAMENTO EMPLEADO----------------------------------------------------------------------*/
+select * from departamento_empresarial;
+INSERT INTO `departamento_empresarial` (`pk_id__departamento_empresarial`,`nombre_departamento_empresarial`) VALUES (1,'BODEGA');
+
+
+/* -----------------------------------------------------EMPLEADO---------------------------------------------------------------------------*/
+select * from empleado;
+INSERT INTO `empleado` (`pk_id_empleado`,`nombre1_empleado`,`nombre2_empleado`,`apellido1_empleado`,`apellido2_empleado`,`fecha_nacimiento_empleado`,`dpi_empleado`,`fk_id_genero_empleado`,`fk_id_estado_civil_empleado`,`email_empleado`,`telefono_empleado`,`numero_iggs_empleado`,`fk_id_licencia_conducir_empleado`,`fk_id_puesto_empleado`,`cuenta_bancaria_empleado`,`fk_id_departamento_empresarial_empleado`,`estado_empleado`) 
+VALUES ('1', 'Mario', 'Hugo', 'Perez', 'Prado', '01/01/1981', '326549812', '1', '2', 'email@falso.com', '23654785', '44444444', '1', '9', '0909090909', '1', '1');
+
+
+/* -----------------------------------------------------ENCARGADO BODEGA---------------------------------------------------------------------------*/
+select * from encargado_bodega;
+INSERT INTO `encargado_bodega` ( `fk_id_empleado`,`fk_id_bodega`,`estado_encargado_bodega`) VALUES (1,1,1);
+
+/* -----------------------------------------------------TIPO MOVIMIENTO---------------------------------------------------------------------------*/
+INSERT INTO `tipo_movimiento` (`pk_id_tipo_movimiento`, `nombre_tipo_movimiento`, `signo_tipo_movimiento`, `estado_tipo_movimiento`) VALUES
+(1, 'Compras', '+', 1),
+(2, 'Ventas', '-', 1),
+(3, 'Pedidos', '+', 1),
+(4, 'Sucursal a Bodega', '+', 1),
+(5, 'Bodega a Sucursal', '+', 1);
+
+/* -----------------------------------------------------LINEA PRODUCTO---------------------------------------------------------------------------*/
+select * from linea_producto;
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Bronce','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Blu','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Antiestress','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Soñadoras','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Firmeza','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Sense','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Luxor','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Orthomaster','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Extraflex','Ninguna ', 1);
+INSERT INTO `linea_producto`(`nombre_linea_producto`,`descripcion_linea_producto`,`estado_linea_producto`) VALUES ('Noche Buena','Ninguna ', 1);
+
+/* -----------------------------------------------------CATEGORIA PRODUCTO---------------------------------------------------------------------------*/
+select * from categoria_producto;
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Familiar','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Niños','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Adultos','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Matrimonial','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('individual','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Doble','Ninguna', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('Queen size','Ninguna ', 1);
+INSERT INTO `categoria_producto`(`nombre_categoria_producto`,`descripcion_categoria_producto`,`estado_categoria_producto`) VALUES ('King size','Ninguna ', 1);
+
+/* -----------------------------------------------------PRODUCTO---------------------------------------------------------------------------*/
+select * from producto;
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (1,1,'Colchon',250.50,60.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (1,2,'Full',600.00, 125.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (2,1,'single',500.00,90.50,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (3,1,'Viscoelastico',800.00,180.200,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (4,1,'Evolution',900.00,125.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (5,1,'Premium Adapt',1500.00,150.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (6,1,'Argentum',1600.00,150.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (7,1,'Platinium',1500.50,150.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (8,1,'Visco Carbono',1650.50,120.20,'Ninguna',1);
+INSERT INTO `producto`(`fk_id_linea_producto`,`fk_id_categoria_producto`,`nombre_producto`,`precio_producto`, `medida_producto`,`descripcion_producto`,`estado_producto`) 
+VALUES (9,1,'Turmalina',1700.50,100.20,'Ninguna',1);
+
+/* -----------------------------------------------------FABRICA---------------------------------------------------------------------------*/
+select * from fabrica;
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (1,160.20,'5ta avenida 9-09 zona 9','23654158','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (2,150.20,'2da avenida 15-10 zona 10','22654310','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (3,120.20,'3ra avenida 14-30 zona 22','29870012','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (4,130.10,'4ta avenida 22-10 zona 14','36100347','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (5,170.30,'9na avenida 55-60 zona 15','32001403','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (6,100.18,'10ma avenida 12-12 zona 2','69802135','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (7,50.13,'3ra avenida 25-27 zona 16','22100310','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (8,60.12,'4ta avenida 65-23 zona 13','22031876','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (9,90.10,'5ta avenida 76-28 zona 18','25410369','Ninguna',1);
+INSERT INTO `fabrica`(`fk_id_municipio`,`dimensiones_fabrica`,`direccion_fabrica`,`telefono_fabrica`,`descripcion_fabrica`,`estado_fabrica`) 
+VALUES (10,85.03,'6ta avenida 42-67 zona 21','27621003','Ninguna',1);
+
+/*----------------------------------------------------REPORTES------------------------------------------------------------------------------*/
+
+INSERT INTO `reporte` (`pk_id_reporte`, `nombre_reporte`, `ruta_reporte`, `estado_reporte`) VALUES
+(1, 'Bodega', 'Bodega.rpt', 1),
+(2, 'Categoria Producto', 'CategoriaProducto.rpt', 1),
+(3, 'Correo Proveedor', 'CorreoProveedor.rpt', 1),
+(4, 'Departamento', 'Departamento.rpt', 1),
+(5, 'Encargado Bodega', 'EncargadoBodega.rpt', 1),
+(6, 'Fabrica', 'Fabrica.rpt', 1),
+(7, 'Linea Producto', 'Linea Producto.rpt', 1),
+(8, 'Marca', 'Marca.rpt', 1),
+(9, 'Tipo Movimiento', 'MovimientoInventario.rpt', 1),
+(10, 'Municipio', 'Municipio.rpt', 1),
+(11, 'Pais', 'Pais.rpt', 1),
+(12, 'Producto', 'Producto.rpt', 1),
+(13, 'Proveedor', 'Proveedor.rpt', 1),
+(14, 'Ruta', 'Ruta.rpt', 1),
+(15, 'Telefono Proveedor', 'TelefonoProveedor.rpt', 1),
+(16, 'Vehiculo', 'Vehiculo.rpt', 1);
+
+/*------------------------------------------------REPORTE APLICACION-----------------------------------------------------------------------------*/
+INSERT INTO `reporte_aplicativo` (`fk_id_reporte`, `fk_id_aplicacion`, `fk_id_modulo`, `estado_reporte_aplicativo`) VALUES
+(1, 2313, 6, 1),
+(2, 2302, 6, 1),
+(3, 2309, 6, 1),
+(4, 2304, 6, 1),
+(5, 2314, 6, 1),
+(6, 2318, 6, 1),
+(7, 2301, 6, 1),
+(8, 2311, 6, 1),
+(9, 2315, 6, 1),
+(10, 2305, 6, 1),
+(11, 2310, 6, 1),
+(12, 2303, 6, 1),
+(13, 2307, 6, 1),
+(14, 2306, 6, 1),
+(15, 2308, 6, 1),
+(16, 2312, 6, 1);
+
+/*------------------------------------------------REPORTE MODULO--------------------------------------------------------------------------------------*/
+INSERT INTO `reporte_modulo` (`fk_id_reporte`, `fk_id_modulo`, `estado_reporte_modulo`) VALUES
+(1, 6, 1),
+(2, 6, 1),
+(3, 6, 1),
+(4, 6, 1),
+(5, 6, 1),
+(6, 6, 1),
+(7, 6, 1),
+(8, 6, 1),
+(9, 6, 1),
+(10, 6, 1),
+(11, 6, 1),
+(12, 6, 1),
+(13, 6, 1),
+(14, 6, 1),
+(15, 6, 1),
+(16, 6, 1);
